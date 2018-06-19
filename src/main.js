@@ -8,10 +8,11 @@ import './style/app.scss';
 class Header extends React.Component {
 
   render() {
-    return (
+    return (      
       <header>
         <h1>Generate Cowsay Lorem</h1>
-      </header>
+      </header> 
+      
     );
   }
 }
@@ -33,7 +34,6 @@ class App extends React.Component {
     let content = faker.name.findName();
     this.updateState(content)
   }
-
   updateState(content) {
     this.setState({content});
   }
@@ -46,7 +46,9 @@ class App extends React.Component {
           <div id="contentWrapper">
           <Cowsay>{this.state.content}</Cowsay>
           </div>
-          <button onClick={this.handleClick}> Click Moo </button>
+          <div>
+            <button onClick={this.handleClick}> Click Me </button>
+          </div>
         </React.Fragment>
       </div>
     )
